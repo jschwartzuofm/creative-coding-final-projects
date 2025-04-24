@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import './Viz1.css';
+import { BackButton } from '../BackButton';
 
 const normalizeName = (n) => n?.trim().toLowerCase();
 const recaseName = (n) =>
@@ -282,6 +283,8 @@ const Viz1 = () => {
   };
 
   return (
+    <>
+    <BackButton />
     <div className="viz1">
       <h2 className="page-title">Migration Map (2023)</h2>
       <div className="map-sidebar-container">
@@ -409,6 +412,7 @@ const Viz1 = () => {
         </div>
       )}
     </div>
+  </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import './Viz2.css';
+import { BackButton } from '../BackButton';
 
 // Clickboxes to toggle the visibility of line ranks
 export const legendData = [
@@ -220,22 +221,25 @@ const Viz2 = () => {
   }
 
   return (
-    <div ref={containerRef} className="viz2"  style={{ position: "relative" }}>
-      <div id="filter-controls" style={{ textAlign: "center", marginBottom: "10px", fontWeight: "700" }}>
-        {legendData.map(({ rank, label, color }) => (
-          <label key={rank} style={{ marginRight: "15px", color: color }}>
-            <input
-              type="checkbox"
-              defaultChecked
-              value={rank}
-              style={{ marginRight: "4px"}}
-              onChange={(e) => toggleLineVisibility(e, rank)}
-            />
-            {label}
-          </label>
-        ))}
+    <>
+      <BackButton />
+      <div ref={containerRef} className="viz2"  style={{ position: "relative" }}>
+        <div id="filter-controls" style={{ textAlign: "center", marginBottom: "10px", fontWeight: "700" }}>
+          {legendData.map(({ rank, label, color }) => (
+            <label key={rank} style={{ marginRight: "15px", color: color }}>
+              <input
+                type="checkbox"
+                defaultChecked
+                value={rank}
+                style={{ marginRight: "4px"}}
+                onChange={(e) => toggleLineVisibility(e, rank)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

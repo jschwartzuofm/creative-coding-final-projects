@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import './Viz3.css';
+import { BackButton } from '../BackButton';
 
 const Viz3 = () => {
   const containerRef = useRef(null);
@@ -196,9 +197,10 @@ const Viz3 = () => {
   });
 
   return (
-    <div>
+    <>
+      <BackButton />
       <div ref={containerRef} className="viz3" />
-    </div>
+    </>
   );
 };
 
