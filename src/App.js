@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Viz1, Viz2, Viz3 } from './components';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Router>
