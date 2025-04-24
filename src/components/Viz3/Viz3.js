@@ -11,21 +11,21 @@ const Viz3 = () => {
     const container = d3.select(containerRef.current);
     container.selectAll('*').remove();
 
-        //Setup: load the D3 library, sets the width and height to the brower's dimensions
+    //Setup: load the D3 library, sets the width and height to the brower's dimensions
     const w = '1000'; //window.innerWidth;
     const h = '800'; //window.innerHeight;
 
+    // Create the SVG canvas
+    const svg = container
+      .append('svg')
+        .attr('width', w)
+        .attr('height', h);
+
     //Setup cont: Initial creation of the tooltip
-    const tooltip = container //d3.select('.viz3')
+    const tooltip = container
       .append('div')
         .attr('class', 'viz3-tooltip')
         .style('opacity', 0);
-
-        // Create the SVG canvas
-    const svg = container //d3.select('.viz3')
-    .append('svg')
-      .attr('width', w)
-      .attr('height', h);
   
     // Load parks CSV, GeoJSON, and council stats CSV at the same time 
     Promise.all([
@@ -75,6 +75,7 @@ const Viz3 = () => {
         .center([-74.00, 40.70])
         .scale(70000)
         .translate([w/2 - 150, h/2]);
+      
       const path = d3.geoPath().projection(projection);
 
       // Create the color scale for park density
@@ -145,6 +146,7 @@ const Viz3 = () => {
         offset: `${(i/(arr.length-1))*100}%`,
         color: colorScale(t)
       }));
+
       gradient.selectAll('stop')
         .data(stops)
         .enter().append('stop')
@@ -181,16 +183,16 @@ const Viz3 = () => {
         .select('.domain').remove();
 
       // ─Add income‐highlight note 
-    const noteX = legendX - 400;               // move 150px left of legend
-    const noteY = legendY + legendHeight + 200; 
+      const noteX = legendX - 400;               // move 150px left of legend
+      const noteY = legendY + legendHeight + 200; 
 
-    svg.append("text")
-      .attr("x", noteX)
-      .attr("y", noteY)
-      .style("font-size", "16px")
-      .style("fill", "#000")
-      .text("*Red borders: districts with median income > $79,713 (NYC median)");
-    });
+      svg.append("text")
+        .attr("x", noteX)
+        .attr("y", noteY)
+        .style("font-size", "16px")
+        .style("fill", "#000")
+        .text("*Red borders: districts with median income > $79,713 (NYC median)");
+      });
   });
 
   return (
