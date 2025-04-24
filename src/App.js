@@ -1,9 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Viz1 from "./pages/Viz1";
-import Viz2 from "./pages/Viz2";
-import Viz3 from "./pages/Viz3";
+import { Home, Viz1, Viz2, Viz3 } from './components';
 
 function App() {
   return (

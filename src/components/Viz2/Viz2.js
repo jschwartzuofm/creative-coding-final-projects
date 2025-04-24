@@ -18,7 +18,7 @@ var svg = d3.selectAll(".viz2")
 // Add tooltip div
 const tooltip = d3.select(".viz2")
   .append("div")
-  .attr("class", "viz2-tooltip");
+    .attr("class", "viz2-tooltip");
 
 // Legend data
 const legendData = [
