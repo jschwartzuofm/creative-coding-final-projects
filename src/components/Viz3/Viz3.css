@@ -6,6 +6,13 @@
   justify-content: center;
 }
 
+.viz3-header {
+  background-color: #FFF8DC;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
 .viz3-tooltip {
   position: absolute;
   pointer-events: none;

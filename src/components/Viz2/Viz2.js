@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import { Flex, Heading } from '@chakra-ui/react';
 import './Viz2.css';
 import { BackButton } from '../BackButton';
+import { AboutDrawer } from '../AboutDrawer';
 
 // Clickboxes to toggle the visibility of line ranks
 export const legendData = [
@@ -223,6 +225,12 @@ const Viz2 = () => {
   return (
     <>
       <BackButton />
+      <Flex className="viz2-header">
+        <Heading size="2xl" marginRight="1rem">
+          Identifying Pedestrian Corridors based on Subway Ridership in NYC
+        </Heading>
+        <AboutDrawer semester="Winter 2025" id="viz2" />
+      </Flex>
       <div ref={containerRef} className="viz2"  style={{ position: "relative" }}>
         <div id="filter-controls" style={{ textAlign: "center", marginBottom: "10px", fontWeight: "700" }}>
           {legendData.map(({ rank, label, color }) => (

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import { Flex, Heading } from '@chakra-ui/react';
 import './Viz3.css';
 import { BackButton } from '../BackButton';
+import { AboutDrawer } from '../AboutDrawer';
 
 const Viz3 = () => {
   const containerRef = useRef(null);
-
-  // d3.select('.viz3').selectAll('svg').remove();
 
   useEffect(() => {
     const container = d3.select(containerRef.current);
@@ -84,15 +84,6 @@ const Viz3 = () => {
       const colorScale = d3.scaleSequential()
         .domain([d3.min(densities), d3.max(densities)])
         .interpolator(d3.interpolateYlGn);
-
-      // Create the title
-      svg.append('text')
-        .attr('x', w / 2)
-        .attr('y', 30)
-        .attr('text-anchor', 'middle')
-        .style('font-size', '20px')
-        .style('font-weight', 'bold')
-        .text('NYC Council Districts: Share of Land as Parkland');
 
       // Draw each district on the svg
       svg.append('g')
@@ -199,6 +190,12 @@ const Viz3 = () => {
   return (
     <>
       <BackButton />
+      <Flex className="viz3-header">
+        <Heading size="2xl" marginRight="1rem">
+          NYC Council Districts: Share of Land as Parkland
+        </Heading>
+        <AboutDrawer semester="Winter 2025" id="viz3" />
+      </Flex>
       <div ref={containerRef} className="viz3" />
     </>
   );

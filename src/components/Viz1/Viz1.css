@@ -4,15 +4,11 @@
   min-height: 100vh;
 }
 
-.page-title {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+.viz1-header {
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .map-sidebar-container {
@@ -28,6 +24,8 @@
 
 .map-container {
   position: relative;
+  display: flex;
+  justify-content: center;
   flex: 2;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 16px;

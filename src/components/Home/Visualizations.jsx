@@ -6,7 +6,7 @@ const Visualizations = () => {
   return (
     <Box>
       <Text fontStyle="italic" paddingY="1rem">
-        (disclaimer: the below visualizations are best viewed on a laptop/desktop computer)
+        (disclaimer: the visualizations below are best viewed on a laptop/desktop computer)
       </Text>
         {
           Object.entries(VisualizationMap).map((semester) => (

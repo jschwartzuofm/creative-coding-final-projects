@@ -1,3 +1,10 @@
+.viz2-header {
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .viz2-tooltip {
   position: absolute;
   top: 20px;

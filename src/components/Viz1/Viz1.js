@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
+import { Flex, Heading } from '@chakra-ui/react';
 import './Viz1.css';
 import { BackButton } from '../BackButton';
+import { AboutDrawer } from '../AboutDrawer';
 
 const normalizeName = (n) => n?.trim().toLowerCase();
 const recaseName = (n) =>
@@ -286,7 +288,12 @@ const Viz1 = () => {
     <>
     <BackButton />
     <div className="viz1">
-      <h2 className="page-title">Migration Map (2023)</h2>
+      <Flex className="viz1-header">
+        <Heading size="2xl" marginRight="1rem" color="black">
+          U.S. Population Migration Map (2023)
+        </Heading>
+        <AboutDrawer semester="Winter 2025" id="viz1" />
+      </Flex>
       <div className="map-sidebar-container">
         <div className="map-container">
           <svg ref={svgRef}></svg>
