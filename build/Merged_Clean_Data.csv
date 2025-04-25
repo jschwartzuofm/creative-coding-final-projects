@@ -1,0 +1,20 @@
+Station Name,Boro,2023_Ridership,Line Name,Stop Name,Boro,Lines,Latitude,Longitude
+"Times Sq-42 St (N,Q,R,S,W,1,2,3,7)/42 St (A,C,E)/Bryant Pk (B,D,F,M)/5 Av (7)",M,"54,266,441",Broadway - Brighton,Times Sq-42 St,M,N Q R W,40.754672,-73.986754
+"Grand Central-42 St (S,4,5,6,7)",M,"30,517,475",Lexington Av,Grand Central-42 St,M,4 5 6,40.751776,-73.976848
+"34 St-Herald Sq (B,D,F,M,N,Q,R,W)",M,"23,680,977",Broadway - Brighton,34 St-Herald Sq,M,N Q R W,40.749567,-73.98795
+"14 St-Union Sq (L,N,Q,R,W,4,5,6)",M,"21,527,757",Canarsie,14 St-Union Sq,M,L,40.734789,-73.99073
+"Fulton St (A,C,J,Z,2,3,4,5)",M,"17,887,203",Jamaica,Fulton St,M,J Z,40.710374,-74.007582
+"34 St-Penn Station (A,C,E)",M,"16,974,543",8th Av - Fulton St,34 St-Penn Station,M,A C E,40.752287,-73.993391
+"59 St-Columbus Circle (A,B,C,D,1)",M,"15,842,348",8th Av - Fulton St,59 St-Columbus Circle,M,A C B D,40.768296,-73.981736
+"34 St-Penn Station (1,2,3)",M,"15,224,047",Broadway - 7Av,34 St-Penn Station,M,1 2 3,40.750373,-73.991057
+"74-Broadway (7)/Jackson Hts-Roosevelt Av (E,F,M,R)",Q,"14,348,691",Flushing,74 St-Broadway,Q,7,40.746848,-73.891394
+Flushing-Main St (7),Q,"13,876,213",Flushing,Flushing-Main St,Q,7,40.7596,-73.83003
+"Chambers St (A,C)/WTC (E)/Park Place (2,3)/Cortlandt (R,W)",M,"12,298,422",8th Av - Fulton St,Chambers St,M,A C,40.714111,-74.008585
+"Lexington Av (N,Q,R)/59 St (4,5,6)",M,"11,691,818",Queens Blvd,Lexington Av/53 St,M,E M,40.757552,-73.969055
+"47-50 Sts-Rockefeller Center (B,D,F,M)",M,"11,387,612",6th Av - Culver,47-50 Sts-Rockefeller Ctr,M,B D F M,40.758663,-73.981329
+"Lexington Av-53 St (E,M)/51 St (6)",M,"11,339,465",Queens Blvd,Lexington Av/53 St,M,E M,40.757552,-73.969055
+"14 St (F,M,1,2,3)/6 Av (L)",M,"11,328,347",6th Av - Culver,14 St,M,F M,40.738228,-73.996209
+"14 St (A,C,E)/8 Av (L)",M,"10,863,467",8th Av - Fulton St,14 St,M,A C E,40.740893,-74.00169
+"Canal St (J,N,Q,R,W,Z,6)",M,"10,521,747",Jamaica,Canal St,M,J Z,40.718092,-73.999892
+"86 St. (4,5,6)",M,"10,472,358",Lexington Av,86 St,M,4 5 6,40.779492,-73.955589
+"West 4 St-Washington Sq (A,B,C,D,E,F,M)",M,"10,011,362",8th Av - Fulton St,W 4 St-Wash Sq,M,A C E,40.732338,-74.000495

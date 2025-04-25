@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Viz1, Viz2, Viz3, Viz4 } from './components';
-import { Text } from '@chakra-ui/react';
 
 const App = () => {
   return (
