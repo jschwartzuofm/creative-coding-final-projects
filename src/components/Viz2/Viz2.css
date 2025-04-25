@@ -1,0 +1,32 @@
+.viz2-header {
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.viz2-tooltip {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.svg-legend rect {
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.svg-legend text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  fill: #333;
+  margin-bottom: 1rem;
+}
