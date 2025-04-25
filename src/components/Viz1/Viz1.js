@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { Flex, Heading } from '@chakra-ui/react';
 import './Viz1.css';
@@ -35,7 +35,7 @@ const Viz1 = () => {
   }, [selectedState]);
 
 
-  const calculateInboundMigration = (targetState) => {
+  const calculateInboundMigration = useCallback((targetState) => {
     const inboundData = {};
     Object.entries(migrationData).forEach(([origin, destinations]) => {
       if (destinations[targetState]) {
@@ -43,10 +43,10 @@ const Viz1 = () => {
       }
     });
     return inboundData;
-  };
+  }, [migrationData]);
 
 
-  const updateTopLocations = (state) => {
+  const updateTopLocations = useCallback((state) => {
     if (!state || !migrationData[state]) return;
     
     if (migrationMode === 'outbound') {
@@ -64,14 +64,14 @@ const Viz1 = () => {
           .slice(0, 5)
       );
     }
-  };
+  }, [migrationData, migrationMode, calculateInboundMigration]);
 
 
   useEffect(() => {
     if (selectedState) {
       updateTopLocations(selectedState);
     }
-  }, [selectedState, migrationMode, migrationData]);
+  }, [selectedState, migrationMode, migrationData, updateTopLocations]);
 
 
   useEffect(() => {
@@ -211,10 +211,10 @@ const Viz1 = () => {
       .selectAll('text')
       .style('fill', '#fff');
 
-  }, [selectedState, migrationData, migrationMode]);
+  }, [selectedState, migrationData, migrationMode, calculateInboundMigration]);
 
 
-  const calculateAllStatesData = () => {
+  const calculateAllStatesData = useCallback(() => {
     const data = Object.keys(migrationData).map(state => {
       let outbound = 0;
       let inbound = 0;
@@ -240,14 +240,14 @@ const Viz1 = () => {
 
 
     return data.sort((a, b) => Math.abs(b.netChange) - Math.abs(a.netChange));
-  };
+  }, [migrationData]);
 
 
   useEffect(() => {
     if (Object.keys(migrationData).length > 0) {
       setAllStatesData(calculateAllStatesData());
     }
-  }, [migrationData]);
+  }, [migrationData, calculateAllStatesData]);
 
 
   const sortData = (data, config) => {
