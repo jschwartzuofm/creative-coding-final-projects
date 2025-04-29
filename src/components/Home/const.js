@@ -4,7 +4,7 @@ export const VisualizationMap = {
       id: 'viz1',
       to: '/viz1',
       title: 'U.S. Population Migration: Where are people moving? 🏡 🏢 🌇',
-      description: "",
+      description: "For this project, we created an interactive U.S. migration map visualizing 2023 state-to-state migration flows. At first, when we saw the raw data, it didn’t really make much sense to us as we had to manually figure out state to state inflows/outflows. Our motivation was to make large-scale migration trends easy to explore at both a national and individual state level. We used D3.js with React to build the visualization, adding features like clickable states, animated tooltips, a color-coded migration scale, and a sortable table of state migration stats. We normalized and processed the migration dataset to ensure consistency across state names. A key design decision was making the map responsive and visually engaging while keeping interactions intuitive. In the future, we’d like to expand it by allowing users to select multiple states at once and view migration arcs between them over time, as well as including all years provided from census data, not just 2023. Additionally, even include a feature to help users understand why people are making the moves between states and using AI to answer specific questions (e.g. Why do Michigan residents move the most to Florida of all states?)",
       authors: [
         {
           name: "Aditya Nimbalkar (B.S. Urban Tech '26)",
